@@ -3,6 +3,7 @@ from os.path import join as pjoin
 
 import data
 import segment
+import parallel
 
 
 base = os.path.dirname(__file__)
@@ -13,5 +14,7 @@ if not os.path.isdir(output):
     os.mkdir(output)
     os.mkdir(pjoin(output, 'segmented'))
 
+
 images = data.load('dr')
-segment.segment(images, target=pjoin(output, 'segmented'))
+parallel.apply_parallel(images, segment.segment,
+                        output_dir=output, postfix='segmented')
