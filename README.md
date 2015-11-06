@@ -18,4 +18,16 @@ We are generating image processing workflows for pills that could be easily exte
 
 ###Current team:
 - Dani Ushizima 
-- Stefan van der Valt
+- Stefan van der Walt
+
+## Getting started
+
+- Download the PIR dataset and extract it into a folder named ``data``.  The
+  folder structure should be:
+
+  data/
+  data/pir-challenge
+  data/pir-challenge/dr
+
+- Run ``make``
+
