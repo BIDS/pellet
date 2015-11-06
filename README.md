@@ -5,7 +5,7 @@ Investigating Pill Recognition Methods for a new National Library of Medicine Im
 With a NIH RFI for the PIR Pilot - more at http://pir.nlm.nih.gov/pilot/instructions.html
 
 ###Where are we now?
-We are able to create masks using the reference (DR) dataset, on the way to extract features and identify how well we are clustering the datasets based on classes.txt, which contains the labels of the image and the class it belong to.
+We are able to create masks using the reference (DR) dataset, on the way to extract features and identify how well we are clustering the datasets based on <a href-"https://github.com/BIDS/pellet/blob/master/classes.txt">classes.txt</a> (Round -> Class 1, Capsule -> Class 2, Others -> Class 3, Oval -> Class 4), which contains the labels of the image and the class it belong to.
 
 ###Where are we going?
 After identifying classes, we can tailor recognition based on the type of pellet we are dealing with. Why is it important?
