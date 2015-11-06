@@ -10,7 +10,7 @@ import parallel
 base = os.path.dirname(__file__)
 output = pjoin(base, '../output')
 
-outputs = {'segmentation': pjoin(output, 'segmented')}
+outputs = {'output': output, 'segmentation': pjoin(output, 'segmented')}
 
 for folder in outputs.values():
     if not os.path.isdir(folder):
