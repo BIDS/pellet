@@ -1,7 +1,7 @@
 # pellet
 Investigating Pill Recognition Methods for a new National Library of Medicine Image Dataset
 
-###How did it started?
+###How did it start?
 With a NIH RFI for the PIR Pilot - more at http://pir.nlm.nih.gov/pilot/instructions.html
 
 ###Where are we now?
