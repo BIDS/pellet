@@ -6,9 +6,7 @@ Investigating Pill Recognition Methods for a new National Library of Medicine Im
 - Download the PIR dataset and extract it into a folder named ``data``.  The
   folder structure should be:
 
-  data/
-  data/pir-challenge
-  data/pir-challenge/dr
+ data/pir-challenge/dr
 
 - Run ``make``
 
