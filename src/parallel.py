@@ -31,3 +31,5 @@ def apply_parallel(image_collection, func, kwargs={},
     res = joblib.Parallel(n_jobs=4, verbose=5)(
         joblib.delayed(func)(image_collection[nr], fn, **kwargs)
         for (fn, nr) in fname_nr)
+
+    return res
