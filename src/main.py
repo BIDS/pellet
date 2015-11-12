@@ -4,13 +4,14 @@ import warnings
 
 import data
 import segment
+import featextraction
 import parallel
 
 
 base = os.path.dirname(__file__)
 output = pjoin(base, '../output')
 
-outputs = {'output': output, 'segmentation': pjoin(output, 'segmented')}
+outputs = {'segmentation': pjoin(output, 'segmented')}
 
 for folder in outputs.values():
     if not os.path.isdir(folder):
@@ -25,3 +26,6 @@ with warnings.catch_warnings():
     parallel.apply_parallel(images, segment.segment,
                             output_dir=outputs['segmentation'],
                             postfix='segmented')
+    parallel.apply_parallel(images, featextraction.extract,
+                            output_dir=outputs['features'],
+                            postfix='feat')

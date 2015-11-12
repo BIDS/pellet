@@ -1,7 +1,8 @@
 #featextraction
 from skimage.measure import label, regionprops
+import collections
 
-def segment(imagegray, imagebin, outfile):
+def extract(imagegray, imagebin, outfile):
     # Resize image: notice that x is height and y is width
     # 1. Reduce Canvas size based on prior info about this database
 
@@ -25,3 +26,11 @@ def segment(imagegray, imagebin, outfile):
             del all_props[p]
             for n,entry in enumerate(v):
                 all_props[p + str(n)] = entry
+
+    #3. Save measurements for this pill
+    od = collections.OrderedDict(sorted(all_props.items()))
+    k = ", ".join(od.keys())
+    v = ", ".join([str(f) for f in od.values()]) #notice you need to convert numbers to strings
+    with open(outfile,'w') as f:
+        #f.write(k)
+        f.writelines([k,'\n',v])
