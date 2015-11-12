@@ -1,7 +1,7 @@
 import numpy as np
 
 from skimage import img_as_ubyte, transform, filters, morphology, exposure, io
-from skimage.color.adapt_rgb import adapt_rgb, each_channel
+from skimage.color.adapt_rgb import adapt_rgb, each_channel, rgb2gray
 from scipy import ndimage as ndi
 
 import matplotlib.pyplot as plt
@@ -36,3 +36,8 @@ def segment(image, outfile):
     bin_pill = ndi.binary_fill_holes(bin_pill)
 
     plt.imsave(outfile, bin_pill, cmap='gray')
+
+    #4. Calling feature extraction - TODO: put it in main
+    filename=outfile.split('segmented')
+    filenamefeat=filename[0]+'feat.csv'
+    extract(rgb2gray(cropped_pill), bin_pill, a)

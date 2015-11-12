@@ -26,6 +26,7 @@ with warnings.catch_warnings():
     parallel.apply_parallel(images, segment.segment,
                             output_dir=outputs['segmentation'],
                             postfix='segmented')
-    parallel.apply_parallel(images, featextraction.extract,
-                            output_dir=outputs['features'],
-                            postfix='feat')
+
+    #parallel.apply_parallel(images, featextraction.extract,
+    #                        output_dir=outputs['features'],
+    #                        postfix='feat')
