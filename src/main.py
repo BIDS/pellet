@@ -4,7 +4,7 @@ import warnings
 
 import data
 import segment
-import featextraction
+#import featextraction
 import parallel
 
 

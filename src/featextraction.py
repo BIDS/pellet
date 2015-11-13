@@ -1,5 +1,6 @@
 #featextraction
 from skimage.measure import label, regionprops
+import numpy as np
 import collections
 
 def extract(imagegray, imagebin, outfile):
