@@ -4,4 +4,4 @@ data
 output
 *.tar
 .ipynb_checkpoints
-*.csv
+*feat.csv
